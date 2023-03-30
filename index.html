@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+<div class="slider js-slider">
+  <div class="slider__inner js-slider__inner"></div>
+
+  <div class="slide js-slide">
+    <div class="slide__content">
+      <figure class="slide__img js-slide__img">
+        <div class=""/>
+      </figure>
+      <figure class="slide__img js-slide__img">
+        <div class=""/>
+      </figure>      
+    </div>
+
+    <div class="slider__text">
+        <div class="slider__text-line js-slider__text-line">
+          <div></div>
+        </div>
+        <div class="slider__text-line js-slider__text-line">
+          <div></div>
+        </div>      
+        <div class="slider__text-line js-slider__text-line">
+          <div></div>
+        </div>      
+        <div class="slider__text-line js-slider__text-line">
+        </div>      
+    </div>
+  </div>
+
+  <div class="slide js-slide">
+    <div class="slide__content">
+      <figure class="slide__img js-slide__img">
+        <div class=""/>
+      </figure>
+      <figure class="slide__img js-slide__img">
+        <div class=""/>
+      </figure>      
+    </div>
+  </div>
+
+  <div class="slide js-slide">
+    <div class="slide__content">
+      <figure class="slide__img js-slide__img">
+        <div class=""/>
+      </figure>
+      <figure class="slide__img js-slide__img">
+        <div class=""/>
+      </figure>      
+    </div>
+  </div>
+
+    <nav class="slider__nav js-slider__nav">
+      <div class="slider-bullet js-slider-bullet">
+        <span class="slider-bullet__text js-slider-bullet__text"></span>
+        <span class="slider-bullet__line js-slider-bullet__line"></span>
+      </div>
+      <div class="slider-bullet js-slider-bullet">
+        <span class="slider-bullet__text js-slider-bullet__text"></span>
+        <span class="slider-bullet__line js-slider-bullet__line"></span>
+      </div>    
+      <div class="slider-bullet js-slider-bullet">
+        <span class="slider-bullet__text js-slider-bullet__text"></span>
+        <span class="slider-bullet__line js-slider-bullet__line"></span>
+      </div>      
+    </nav>
+  
+    <div class="scroll js-scroll"></div>
+</div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+<!-- Three JS shaders -->
+<script id="vertexShader" type="x-shader/x-vertex">
+  varying vec2 vUv;
+  void main() {
+    vUv = uv;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+  }
+</script>
+
+<script id="fragmentShader" type="x-shader/x-fragment">
+  varying vec2 vUv;
+
+  uniform sampler2D texture1;
+  uniform sampler2D texture2;
+  uniform sampler2D disp;
+
+  uniform float dispPower;
+  uniform float intensity;
+  
+  void main() {
+    vec2 uv = vUv;
+    
+    vec4 disp = texture2D(disp, uv);
+    vec2 dispVec = vec2(disp.x, disp.y);
+    
+    vec2 distPos1 = uv + (dispVec * intensity * dispPower);
+    vec2 distPos2 = uv + (dispVec * -(intensity * (1.0 - dispPower)));
+    
+    vec4 _texture1 = texture2D(texture1, distPos1);
+    vec4 _texture2 = texture2D(texture2, distPos2);
+    
+    gl_FragColor = mix(_texture1, _texture2, dispPower);
+  }
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>
+<script type="module" src="./src/script.jsx"></script>
+  </body>
+</html>
