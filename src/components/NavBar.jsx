@@ -11,20 +11,26 @@ const NavBar = () => (
   <ul>
     <li>
        <NavLink
-      exact='true' to='/blog'
-      activelassname="is-active"><span>Blog Posts</span>
+       to='/blog'
+  style={isActive => ({
+    color: isActive ? "#fff" : "#fcd933"
+  })}><span>Blog Posts</span>
       </NavLink>
     </li>
     <li>
        <NavLink
        to='nftDrop'
-      activeclassname="is-active"><span>MarketPleace</span>
+  style={isActive => ({
+    color: isActive ? "#fff" : "#fcd933"
+  })}><span>MarketPleace</span>
       </NavLink>
     </li>    
     <li>
        <NavLink
        to='/'
-      activeclassname='is-active'><span>HeadLine</span>
+  style={isActive => ({
+    color: isActive ? "#fff" : "#fcd933"
+  })}><span>HeadLine</span>
       </NavLink>
     </li>    
   </ul>
