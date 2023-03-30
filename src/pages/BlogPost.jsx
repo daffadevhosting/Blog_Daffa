@@ -67,14 +67,6 @@ export default function Blogpost() {
 
           <PortableText value={blogpost.body} />
           </div>
-          <div className="bottomLink">
-            <Link
-              to="/blog"
-              className="linkBut"
-            >More Blog posts
-            </Link>
-          </div>
-
         </section>
       )}
     </>

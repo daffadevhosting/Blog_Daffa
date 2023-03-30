@@ -385,3 +385,7 @@ i {
   justify-content: center;
   width: 100%;
 }
+
+ul, li {
+    list-style: none;
+}

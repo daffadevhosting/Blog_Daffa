@@ -4,12 +4,15 @@ import '../App.css'
 
 
 const NavBar = () => (
+
+
+
 <nav className="nav nav--left js-nav">
   <ul>
     <li>
        <NavLink
       exact='true' to='/blog'
-      activeclassname="is-active"><span>Blog Posts</span>
+      activelassname="is-active"><span>Blog Posts</span>
       </NavLink>
     </li>
     <li>

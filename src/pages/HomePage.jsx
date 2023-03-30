@@ -74,14 +74,6 @@ export default function Homepage() {
           </div>
         ))}
       </section>
-
-      <div className="bottomLink">
-        <Link
-          to="/blog"
-          className="linkBut"
-        >All Blog Posts
-        </Link>
-      </div>
     </>
   );
 }

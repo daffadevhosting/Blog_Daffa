@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { client } from "../lib/client";
+import AdSense from "../components/Adsense";
 import { Link } from "react-router-dom";
 
 export default function Blog() {
@@ -33,7 +34,6 @@ export default function Blog() {
     <>
       <div id="Blog" className="max-w-7xl px-5 mx-auto mt-20 mb-10">
         <h1 className="text-4xl lg:text-6xl mb-6 capitalize">All Blog Posts</h1>
-      </div>
       <section className="grid_post">
         {stories.map((story) => (
           <div key={story.slug.current}>
@@ -61,6 +61,9 @@ export default function Blog() {
             </article>
           </div>
         ))}
+        <div className="iklanGoogle">
+        <AdSense/>
+        </div>
       </section>
 
       <div className="max-w-7xl mx-auto px-5 mb-20 flex items-end justify-end">
@@ -70,6 +73,7 @@ export default function Blog() {
         >
           Back to Homepage
         </Link>
+      </div>
       </div>
     </>
   );

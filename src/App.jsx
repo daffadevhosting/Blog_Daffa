@@ -6,6 +6,7 @@ import DropNft from "./pages/nftDrop";
 import Error from "./pages/Error";
 import { gsap } from "gsap";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import './App.css'
 
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/nftDrop" element={<DropNft />}/>
           <Route path="*" element={<Error />}/>
         </Routes>
+        <Footer />
     </>
   );
 }
