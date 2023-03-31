@@ -7,6 +7,7 @@ const Adsense = () => (
   client='ca-pub-1171588080744378'
   slot='8699873320'
   className="iklanGoogle"
+  style={{ maxWidth: 300, height: 300 }}
   format=''
 />
 );

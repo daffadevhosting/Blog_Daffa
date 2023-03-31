@@ -16,7 +16,7 @@ export default function App() {
     <>
         <NavBar />
         <ScrollToTop />
-
+        <div className="container">
         <Routes>
           <Route exact path="/" element={<HomePage />}/>
           <Route path="/blog" element={<Blog />}/>
@@ -24,6 +24,7 @@ export default function App() {
           <Route path="/nftDrop" element={<DropNft />}/>
           <Route path="*" element={<Error />}/>
         </Routes>
+        </div>
         <Footer />
     </>
   );
