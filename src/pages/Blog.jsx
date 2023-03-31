@@ -53,7 +53,7 @@ export default function Blog() {
                 <div className="textContent">
                 <h2 className="text-xl my-2">{story.title}</h2>
                 <p className="text-sm leading-relaxed">
-                  {`${story.body[0].children[0].text.substring(0, 120)}...`}
+                  {`${story.body[0].children[0].text.substring(0, 100)}...`}
                 </p>
               <Link className="button" to={`/blog/${story.slug.current}`} key={story.slug.current}> Baca </Link>
                 </div>
