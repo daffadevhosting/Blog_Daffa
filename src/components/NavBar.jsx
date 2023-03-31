@@ -11,6 +11,14 @@ const NavBar = () => (
   <ul>
     <li>
        <NavLink
+       to='/'
+  style={isActive => ({
+    color: isActive ? "#fff" : "#fcd933"
+  })}><span>HeadLine</span>
+      </NavLink>
+    </li>    
+    <li>
+       <NavLink
        to='/blog'
   style={isActive => ({
     color: isActive ? "#fff" : "#fcd933"
@@ -23,14 +31,6 @@ const NavBar = () => (
   style={isActive => ({
     color: isActive ? "#fff" : "#fcd933"
   })}><span>MarketPleace</span>
-      </NavLink>
-    </li>    
-    <li>
-       <NavLink
-       to='/'
-  style={isActive => ({
-    color: isActive ? "#fff" : "#fcd933"
-  })}><span>HeadLine</span>
       </NavLink>
     </li>    
   </ul>
