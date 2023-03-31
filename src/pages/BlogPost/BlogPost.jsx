@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { client } from "../lib/client";
+import { client } from "../../lib/client";
 import { format } from "date-fns";
 import { PortableText } from "@portabletext/react";
 import { Image, useImage } from 'react-img-placeholder';
-import placeholder from '../assets/Placeholder.svg';
-import '../App.css';
+import placeholder from '../../assets/Placeholder.svg';
+import '../../App.css';
 
 export default function Blogpost() {
   const [blogpost, setBlogpost] = useState([]);

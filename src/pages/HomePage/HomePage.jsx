@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { client } from "../lib/client";
+import { client } from "../../lib/client";
 import { Image, useImage } from 'react-img-placeholder';
 import { format } from "date-fns";
 import { Link } from "react-router-dom";
-import '../App.css';
-import placeholder from '../assets/Placeholder.svg';
+import '../../App.css';
+import placeholder from '../../assets/Placeholder.svg';
 
 export default function Homepage() {
   const [stories, setStories] = useState([]);

@@ -27,7 +27,7 @@ const NavBar = () => (
     </li>
     <li>
        <NavLink
-       to='nftDrop'
+       to='/marketPlace'
   style={isActive => ({
     color: isActive ? "#fff" : "#fcd933"
   })}><span>MarketPleace</span>

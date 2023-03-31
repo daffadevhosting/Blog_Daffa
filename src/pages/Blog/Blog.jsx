@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { client } from "../lib/client";
-import AdSense from "../components/Adsense";
+import { client } from "../../lib/client";
+import AdSense from "../../components/Adsense";
 import { Link } from "react-router-dom";
 
 export default function Blog() {
@@ -65,15 +65,6 @@ export default function Blog() {
         <AdSense/>
         </div>
       </section>
-
-      <div className="max-w-7xl mx-auto px-5 mb-20 flex items-end justify-end">
-        <Link
-          to="/"
-          className="bg-white dark:bg-slate-800 dark:hover:bg-slate-700 py-2 px-8 rounded shadow text-slate-800 dark:text-slate-400 tracking-wide hover:opacity-75 transition-all duration-200"
-        >
-          Back to Homepage
-        </Link>
-      </div>
       </div>
     </>
   );
