@@ -22,7 +22,7 @@ export default function App() {
           <Route exact path="/blog" element={<Blog />}/>
           <Route exact path="/blog/:slug" element={<BlogPost />}/>
           <Route exact path="/marketPlace" element={<Market />}/>
-          <Route exact path="*" element={<Error />}/>
+          <Route exact path="*" element={<p>Page not found</p>}/>
         </Routes>
         </div>
         <Footer />

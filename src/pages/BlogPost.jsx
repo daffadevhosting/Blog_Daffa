@@ -9,6 +9,9 @@ import '../App.css';
 
 function Blogpost() {
   const [blogpost, setBlogpost] = useState([]);
+
+localStorage.setItem('pageId', 'blogpost');
+
   const { slug } = useParams();
 
   useEffect(() => {
@@ -38,6 +41,11 @@ function Blogpost() {
   useEffect(() => {
     document.title = `Membaca | ${blogpost.title}`;
   }, [blogpost.title]);
+
+window.onload = function() {
+  const pageId = localStorage.getItem('pageId');
+  console.log(pageId);
+}
 
   return (
     <>

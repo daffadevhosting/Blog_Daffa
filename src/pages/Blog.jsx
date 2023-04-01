@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 function Blog() {
   const [stories, setStories] = useState([]);
 
+localStorage.setItem('pageId', 'blog');
+
   useEffect(() => {
     client
       .fetch(
@@ -30,10 +32,15 @@ function Blog() {
       .catch(console.error);
   }, []);
 
+window.onload = function() {
+  const pageId = localStorage.getItem('pageId');
+  console.log(pageId);
+}
+
   return (
     <>
-      <div id="Blog" className="max-w-7xl px-5 mx-auto mt-20 mb-10">
-        <h1 className="text-4xl lg:text-6xl mb-6 capitalize">All Blog Posts</h1>
+      <div id="Blog">
+        <h1 className="text">All Blog Posts</h1>
       <section className="grid_post">
         {stories.map((story) => (
           <div key={story.slug.current}>
@@ -61,9 +68,6 @@ function Blog() {
             </article>
           </div>
         ))}
-        <div className="iklanGoogle">
-        <AdSense/>
-        </div>
       </section>
       </div>
     </>

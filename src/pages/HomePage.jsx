@@ -6,8 +6,11 @@ import { Link } from "react-router-dom";
 import '../App.css';
 import placeholder from '../assets/Placeholder.svg';
 
+
 export default function Homepage() {
   const [stories, setStories] = useState([]);
+
+localStorage.setItem('pageId', 'home');
 
   useEffect(() => {
     client
@@ -38,6 +41,11 @@ export default function Homepage() {
   useEffect(() => {
     document.title = "Daffa Blog";
   }, []);
+
+window.onload = function() {
+  const pageId = localStorage.getItem('pageId');
+  console.log(pageId);
+}
 
   return (
     <>
