@@ -1,9 +1,10 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage/HomePage";
-import Blog from "./pages/Blog/Blog";
-import BlogPost from "./pages/BlogPost/BlogPost";
-import Market from "./pages/MarketPlace/marketPlace";
-import Error from "./pages/Error/Error";
+import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
+import routes from '~react-pages'
+import HomePage from "./pages/HomePage";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
+import Market from "./pages/marketPlace";
+import Error from "./pages/Error";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";

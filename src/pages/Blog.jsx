@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { client } from "../../lib/client";
-import AdSense from "../../components/Adsense";
+import { client } from "../lib/client";
+import AdSense from "../components/Adsense";
 import { Link } from "react-router-dom";
 
-export default function Blog() {
+function Blog() {
   const [stories, setStories] = useState([]);
 
   useEffect(() => {
@@ -69,3 +69,4 @@ export default function Blog() {
     </>
   );
 }
+export default Blog;

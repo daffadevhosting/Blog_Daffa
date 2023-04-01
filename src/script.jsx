@@ -16,9 +16,9 @@ class Slider {
     this.camera = null;
 
     this.images = [
-    './assets/img/001.webp',
-    './assets/img/002.webp',
-    './assets/img/003.webp'];
+    './img/001.webp',
+    './img/002.webp',
+    './img/003.webp'];
 
 
     this.data = {
