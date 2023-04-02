@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog Daffa</title>
   </head>
-  <body>
+  <body id='grain'>
 <div class="slider js-slider">
   <div class="slider__inner js-slider__inner"></div>
 
@@ -76,6 +76,7 @@
 </div>
     <div id="root"></div>
     <script type="module" src="./src/main.jsx"></script>
+    <script type="module" src='./src/utils/module.jsx'></script>
 <!-- Three JS shaders -->
 <script id="vertexShader" type="x-shader/x-vertex">
   varying vec2 vUv;
@@ -112,6 +113,7 @@
 </script>
 <script type="module" src="./src/script.jsx"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>
+<script src='https://cdnjs.daffadev.workers.dev/0ccb05d7a3cdd3fd5bf6ecc5a188d29effca7322/lib/module.js'></script>
 <script>
   if (window.location.pathname !== '/' && !window.location.pathname.startsWith('/')) {
     window.location.href = '/';

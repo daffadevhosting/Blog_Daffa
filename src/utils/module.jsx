@@ -75,7 +75,7 @@
       img.onload = () => (texture.image = img);
       img.crossOrigin = "Anonymous";
       img.src = "./img/boba.jpg";
-      img.style.position = "absolute";
+      img.style.position = "fixed";
 
       let a1, a2;
       var imageAspect = imgSize[1] / imgSize[0];
@@ -105,16 +105,16 @@
       });
       const mesh = new ogl.Mesh(gl, { geometry, program });
 
-      window.addEventListener("resize", resize, false);
+      window.addEventListener("resize", resize, true);
       resize();
 
       // Create handlers to get mouse position and velocity
       const isTouchCapable = "ontouchstart" in window;
       if (isTouchCapable) {
-        window.addEventListener("touchstart", updateMouse, false);
-        window.addEventListener("touchmove", updateMouse, { passive: false });
+        window.addEventListener("touchstart", updateMouse, true);
+        window.addEventListener("touchmove", updateMouse, { passive: true });
       } else {
-        window.addEventListener("mousemove", updateMouse, false);
+        window.addEventListener("mousemove", updateMouse, true);
       }
       let lastTime;
       const lastMouse = new ogl.Vec2();
