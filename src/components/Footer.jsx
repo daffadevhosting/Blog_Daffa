@@ -1,5 +1,6 @@
 import react from 'react'
 import { Link } from "react-router-dom";
+import { GoMarkGithub } from "react-icons/go";
 
 
 const Footer = () => (
@@ -11,7 +12,7 @@ const Footer = () => (
 		<ul className="flex_ul">
 			<li>
 				<Link to="https://github.com/daffadevhosting" target="_blank">
-					<span>Github</span>
+					<span><GoMarkGithub/> Github</span>
 				</Link>
 			</li>
 		</ul>

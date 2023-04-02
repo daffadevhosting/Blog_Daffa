@@ -9,6 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@thirdweb-dev/chains": "^0.1.2",
+    "@thirdweb-dev/react": "^3.9",
+    "@thirdweb-dev/sdk": "^3.9",
+    "ethers": "^5.7.2",
     "@portabletext/react": "^1.0.6",
     "@react-three/drei": "^9.58.5",
     "@react-three/fiber": "^8.12.0",
@@ -23,6 +27,7 @@
     "react": "^18.2.0",
     "react-adsense": "^0.1.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
     "react-img-placeholder": "^0.1.5",
     "react-refresh": "^0.14.0",
     "react-router-dom": "^6.9.0",

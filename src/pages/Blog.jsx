@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import { client } from "../lib/client";
 import AdSense from "../components/Adsense";
 import { Link } from "react-router-dom";
@@ -31,6 +31,9 @@ localStorage.setItem('pageId', 'blog');
       })
       .catch(console.error);
   }, []);
+  if (!stories === null) {
+    return <h2>Loading posts...</h2>;
+  }
 
 window.onload = function() {
   const pageId = localStorage.getItem('pageId');
@@ -42,6 +45,7 @@ window.onload = function() {
       <div id="Blog">
         <h1 className="text">All Blog Posts</h1>
       <section className="grid_post">
+        <Suspense fallback={<h1 className="loading"> Loading... </h1>}>
         {stories.map((story) => (
           <div key={story.slug.current}>
             <article className="postCard">
@@ -68,6 +72,7 @@ window.onload = function() {
             </article>
           </div>
         ))}
+        </Suspense>
       </section>
       </div>
     </>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import { client } from "../lib/client";
 import { Image, useImage } from 'react-img-placeholder';
 import { format } from "date-fns";
@@ -7,7 +7,7 @@ import '../App.css';
 import placeholder from '../assets/Placeholder.svg';
 
 
-export default function Homepage() {
+function Homepage() {
   const [stories, setStories] = useState([]);
 
 localStorage.setItem('pageId', 'home');
@@ -35,8 +35,9 @@ localStorage.setItem('pageId', 'home');
       })
       .catch(console.error);
   }, []);
-
- if (!stories) return <div>Loading...</div>;
+  if (stories === null) {
+    return <h2>Loading posts...</h2>;
+  }
 
   useEffect(() => {
     document.title = "Daffa Blog";
@@ -49,6 +50,7 @@ window.onload = function() {
 
   return (
     <>
+        <Suspense fallback={<h1 className="loading"> Loading... </h1>}>
       <section className="homePage section_grid">
         {stories.map((story) => (
           <div className="card_grid" key={story.slug.current}>
@@ -82,6 +84,8 @@ window.onload = function() {
           </div>
         ))}
       </section>
+        </Suspense>
     </>
   );
 }
+export default Homepage

@@ -1,12 +1,16 @@
-import React from 'react';
+
+import React from "react";
+
 
 function MarketPlace() {
 
 localStorage.setItem('pageId', 'marketplace');
 
-	return (
-<>
-	
+  return (
+    <>
+    <p className="">
+  "Looks like there are no items in this collection.
+    </p>
 </>
   );
 }
