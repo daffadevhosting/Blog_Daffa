@@ -77,7 +77,7 @@ window.onload = function() {
                 <p className="contentText">
                   {`${story.body[0].children[0].text.substring(0, 100)}...`}
                 </p>
-                <Link className="button" to={`/blog/${story.slug.current}`} key={story.slug.current}>Baca</Link>
+                <Link className="button" to={`/article/${story.slug.current}`} key={story.slug.current}>Baca</Link>
               </div>
               </div>
             </article>

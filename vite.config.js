@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import react from '@vitejs/plugin-react-swc'
 import Pages from 'vite-plugin-pages'
+import { ViteMinifyPlugin } from 'vite-plugin-minify'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -9,6 +10,7 @@ export default defineConfig({
     port: 8000,
   },
   plugins: [react(),
+    ViteMinifyPlugin({}),
     Pages({
       dirs: [
         { dir: 'src/pages/HomePage', baseRoute: '' },

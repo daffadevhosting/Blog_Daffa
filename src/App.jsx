@@ -20,8 +20,8 @@ export default function App() {
         <div className="container">
         <Routes>
           <Route exact path="/" element={<HomePage />}/>
-          <Route exact path="/blog" element={<Blog />}/>
-          <Route exact path="/blog/:slug" element={<BlogPost />}/>
+          <Route exact path="/article" element={<Blog />}/>
+          <Route exact path="/article/:slug" element={<BlogPost />}/>
           <Route exact path="/marketPlace" element={<Market />}/>
           <Route exact path="*" element={<Error />}/>
         </Routes>

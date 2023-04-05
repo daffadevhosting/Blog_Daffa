@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { client } from "../lib/client";
 import { format } from "date-fns";
 import { PortableText } from "@portabletext/react";
+import AdSense from '../components/Adsense';
 import { Image, useImage } from 'react-img-placeholder';
 import placeholder from '../assets/Placeholder.svg';
 import '../App.css';
@@ -39,7 +40,7 @@ localStorage.setItem('pageId', 'blogpost');
   }, [slug]);
 
   useEffect(() => {
-    document.title = `Membaca | ${blogpost.title}`;
+    document.title = `Daffa Blog | ${blogpost.title}`;
   }, [blogpost.title]);
 
 window.onload = function() {
