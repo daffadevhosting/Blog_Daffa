@@ -71,7 +71,7 @@ export default function HomePage() {
             </div>
               <div className="contentBox">
               <div>
-                <h2>{post.title}</h2>
+                <h3>{post.title}</h3>
                 <p className="contentText">
                   {`${post.body[0].children[0].text.substring(0, 100)}...`}
                 </p>

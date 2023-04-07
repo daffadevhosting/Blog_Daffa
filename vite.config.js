@@ -14,13 +14,13 @@ export default defineConfig({
     Pages({
       dirs: [
         { dir: 'src/pages/index', baseRoute: '' },
-        { dir: 'src/pages/BlogPost', baseRoute: 'article' },
-        { dir: 'src/pages/article/Post', baseRoute: 'article/:slug' },
+        { dir: 'src/pages/blogpost', baseRoute: 'article' },
+        { dir: 'src/pages/article/post', baseRoute: 'article/:slug' },
         { dir: 'src/studio/[[...index]]/pages', baseRoute: 'studio' },
-        { dir: 'src/pages/Error', baseRoute: '*' },
+        { dir: 'src/pages/error', baseRoute: 'error' },
       ],
     }),],
     build: {
-        chunkSizeWarningLimit: 10000
+        chunkSizeWarningLimit: 4096
     },
 })
