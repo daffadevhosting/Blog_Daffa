@@ -10,6 +10,7 @@ import placeholder from '/placeholder.webp';
 export default function HomePage() {
   const [posts, setPosts] = useState([]);
 
+localStorage.setItem('pageId', 'home');
 
   useEffect(() => {
     client
@@ -85,4 +86,10 @@ export default function HomePage() {
       <Footer/>
 	</div>
 		)
+
+window.onload = function() {
+  const pageId = localStorage.getItem('pageId');
+  console.log(pageId);
+}
+
 }

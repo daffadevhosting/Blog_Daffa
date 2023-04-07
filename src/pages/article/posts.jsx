@@ -9,6 +9,7 @@ import placeholder from '/placeholder.webp';
 function Posts() {
   const [blogpost, setBlogpost] = useState([]);
 
+localStorage.setItem('pageId', 'Posts');
 
   const { slug } = useParams();
 
@@ -72,6 +73,11 @@ function Posts() {
       )}
     </>
   );
+}
+
+window.onload = function() {
+  const pageId = localStorage.getItem('Posts');
+  console.log(pageId);
 }
 
 export default Posts;

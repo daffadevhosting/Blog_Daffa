@@ -7,7 +7,7 @@ import BlogPost from "./pages/article/posts";
 import NavBar from "./components/navbar";
 import Footer from "./components/Footer";
 import Error from "./pages/error";
-import Studio from "./studio/[[...index]]/pages";
+import Studio from "./studio/[[...index]]";
 import './App.css'
 
 function App() {
