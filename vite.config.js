@@ -16,7 +16,7 @@ export default defineConfig({
         { dir: 'src/pages/index', baseRoute: '' },
         { dir: 'src/pages/BlogPost', baseRoute: 'article' },
         { dir: 'src/pages/article/Post', baseRoute: 'article/:slug' },
-        { dir: 'src/pages/studio', baseRoute: 'studio' },
+        { dir: 'src/studio/*', baseRoute: 'studio' },
         { dir: 'src/pages/Error', baseRoute: '*' },
       ],
     }),],
