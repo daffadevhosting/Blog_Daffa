@@ -4,16 +4,16 @@ const sass = require('gulp-sass')(require('sass'))
 
 
 function buildStyles() {
-    return src('_styles/**/*.scss')
+    return src('_styling/**/*.scss')
         .pipe(sass({
             includePaths: ['./node_modules'],
          }).on('error', sass.logError))
         .pipe(cleanCss())
-        .pipe(dest('src/'))
+        .pipe(dest('src/style/'))
 }
 
 function watchTask() {
-    watch(['_styles/**/*.scss'], buildStyles)
+    watch(['_styling/**/*.scss'], buildStyles)
 }
 
 exports.default = series(buildStyles, watchTask)
